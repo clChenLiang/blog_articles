@@ -1,9 +1,11 @@
-选读参考：
-https://www.jianshu.com/p/2cae952250d1
-
 
 ## 开发命令行原理
+看似很神奇的功能，其实本质十分简单。
+> ```#!/usr/bin/env node```
+> 这句话，告诉了 `*nix` 系统，当前文件，应该使用什么工具/软件来执行
 
+
+而这，就是 node 开发命令行工具的原理
 
 ## 代码
 > process.exit(0)
@@ -11,6 +13,8 @@ https://www.jianshu.com/p/2cae952250d1
 1. yargs 
 2. shelljs
 3. 
+
+## 命令行开发基础知识
 
 ## 敲代码时遇到的问题
 1. `#!` 后跟路径： #!/usr/bin/env 
