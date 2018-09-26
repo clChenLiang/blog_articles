@@ -1,3 +1,5 @@
+## 目录
+
 ### 参考
 * [张鑫旭](https://www.zhangxinxu.com/wordpress/page/3/?s=CSS+%E5%B8%83%E5%B1%80)
 * [MDN](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Visual_formatting_model)
@@ -11,7 +13,7 @@ red{
 }
 </style>
 
-### 盒子模型
+### 盒子模型<a id="a"></a>
 文档中的每一个元素被浏览器转换成 `盒子`. 盒子的布局由以下几个因素控制：
 - 盒子的尺寸：精确指定、由约束条件指定或没有指定
 - 盒子的类型：行内盒子（inline）、行内级盒子（inline-level）、原子行内级盒子（atomic inline-level）、块盒子（block）
@@ -37,6 +39,8 @@ red{
 3. 非替换行内块
 4. 参与创建其容器
 5. 定位规则
+6. 可替换元素: 独立于 CSS 渲染之外的外部对象。即不用 `CSS` 渲染的元素。有 `img` `object` `video` `textarea` `input`。部分情况下可替换元素，为 `audio` `canvas`。
+
     `float` `position`
     | 定位 | 作用 | 条件 |
     |--|--|--|
