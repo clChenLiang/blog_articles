@@ -104,3 +104,13 @@ img{vertical-align:bottom;}
 baseline: 取值有多种
 图片等内联元素的基线为底部（border-bottom）,而文本则不一样，往往会多出一些来。多出的空隙一般为行间距，其计算值为 = `line-height` - `content-height`;
 3. `line-height` 的实际应用
+
+##### 深入理解 vertical-align 
+1. inline 水平元素：
+    `<img>`, `<span>`, `<strong>`, `<em>`, (未知元素)...
+2. inline-block 元素：
+    `<input>`, `<button>`
+3. 元素应用 `float` 后，变成 block
+ 
+
+
