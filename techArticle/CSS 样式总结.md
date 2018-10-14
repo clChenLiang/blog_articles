@@ -1,5 +1,5 @@
 ## 目录
-
+<@TOC>
 ### 参考
 * [张鑫旭](https://www.zhangxinxu.com/wordpress/page/3/?s=CSS+%E5%B8%83%E5%B1%80)
 * [MDN](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Visual_formatting_model)
@@ -81,3 +81,26 @@ CSS 布局样式由基石 -- 包含块决定。在包含块的位置上，受 po
 问题：
     1. absolute 绝对定位，不占据空间，跟随属性. 有点类似于 z-index ，但不等同于
     2. 
+
+
+#### 基线 baseline
+内联元素才有 baseline, 块级元素没有这个概念
+
+#### 张鑫旭 imooc 视频
+##### 深入理解行高 line-height
+[链接](https://www.imooc.com/video/8261)
+1. 消除图片底部间隙
+```css
+img{display: block;}
+```
+```css
+img{vertical-align:bottom;}
+```
+```css
+.box{line-height: 0;}
+```
+2. line-height 基理
+定义： 两基线的距离
+baseline: 取值有多种
+图片等内联元素的基线为底部（border-bottom）,而文本则不一样，往往会多出一些来。多出的空隙一般为行间距，其计算值为 = `line-height` - `content-height`;
+3. `line-height` 的实际应用
