@@ -52,3 +52,18 @@ if(typeof params[key] == 'object' ) {
 }
 ```
 据此，完成全部的替换，达到与前端写定 `form` 的一样效果。
+
+## 补充
+在 js 中，获取一个 obj 的对象名
+```js
+// domain 为 obj 所在的域。可为全局，也可以为某个对象
+function getObjName(obj, domain){
+  // obj 绑定在 全局时适用
+  var domain = domain || (typeof global == 'undefined' ? window : global);
+  for(let name in domain){
+    if(domain[name] === obj){
+      return name;
+    }
+  }
+}
+```

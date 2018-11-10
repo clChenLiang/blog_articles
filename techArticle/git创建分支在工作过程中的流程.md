@@ -48,7 +48,11 @@ git pull develop
 ```
 git checkout origin/dev
 ```
-
+#### 2. 拉取远程分支到本地
+```
+git checkout -b 本地分支名x origin/远程分支名x
+```
+该指令会将 `远程指定分支` 拉取到本地，并在本地创建了一个与远程分支关联的 `本地分支`
 #### 2. 从本地 `develop` 分支检出将要创建的新分支
 
 ```
