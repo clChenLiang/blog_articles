@@ -21,7 +21,7 @@ Deferred.prototype = {
 
   },
   _resback: function(){
-    
+    this._fire()
   },
   callback: function(res){
     this._check();
