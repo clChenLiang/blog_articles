@@ -82,3 +82,33 @@ var chain = require('slide').chain;
 ```js
 process.emit('time', 'stage:' + name)
 ```
+
+
+
+## 重要属性
+1. scope -- '/' 命名空间。最多只有一级
+`getProjectScope()` -- 返回 `@name` 
+```js
+
+  function scopeifyScope (scope) {
+    return (!scope || scope[0] === '@') ? scope : ('@' + scope)
+  }
+
+  function getProjectScope (prefix) {
+    try {
+      var pkg = JSON.parse(fs.readFileSync(path.join(prefix, 'package.json')))
+      if (typeof pkg.name !== 'string') return ''
+      var sep = pkg.name.indexOf('/')
+      if (sep === -1) return ''
+      return pkg.name.slice(0, sep)
+    } catch (ex) {
+      return ''
+    }
+  }
+```
+
+2. 有哪些命令
+`npm.js:L118`
+```js
+var cmd = require(path.join(__dirname, a + '.js'))
+```
