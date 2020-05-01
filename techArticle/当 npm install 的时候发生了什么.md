@@ -112,3 +112,10 @@ process.emit('time', 'stage:' + name)
 ```js
 var cmd = require(path.join(__dirname, a + '.js'))
 ```
+
+3. 相关概论
+deref: Dereference -- 间接引用
+
+module.main -- 运行程序的主模块
+
+
